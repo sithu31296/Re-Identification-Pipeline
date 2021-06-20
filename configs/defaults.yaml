@@ -1,0 +1,42 @@
+SAVE_DIR: output
+DEVICE: cpu
+
+MODEL:
+  NAME: 'baseline'
+  BACKBONE: 
+    NAME: 'resnet-50'
+    PRETRAIN: ''
+
+DATASET:
+  NAME: 'market1501'
+  ROOT: 'C:/Users/sithu/Documents/Datasets/Market-1501-v15.09.15'
+
+TRAIN:
+  EPOCHS: 100
+  BATCH_SIZE: 2
+  WORKERS: 2
+  LR: 0.1
+  EVAL_INTERVAL: 20
+  IMG_SIZE: [384, 192]
+  STEP_LR:
+    STEP_SIZE: 30
+    GAMMA: 0.1
+  AUG:
+    RE_P: 0.5
+    B_P: 0.1
+    C_P: 0.1
+    S_P: 0.1
+    H_P: 0.1
+    G_P: 0.4
+  LOSS:
+    NAME: 'ce+triplet'
+    EPSILON: 0.1
+    MARGIN: 0.3
+    GAMMA: 0.3
+
+EVAL:
+  BATCH_SIZE: 2
+  WORKERS: 2
+  IMG_SIZE: [384, 192]
+  MAX_RANK: 50
+  RE_RANK: true
