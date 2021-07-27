@@ -24,29 +24,25 @@ Datasets:
 * [MSMT17](http://www.pkuvmc.com/publications/msmt17.html) (Coming Soon)
 * [VeRi](https://vehiclereid.github.io/VeRi/) (Coming Soon)
 
-Models:
-* Baseline
-* [PCB](https://arxiv.org/abs/1711.09349) 
+Models
 
-Losses:
-* [Triplet Loss]()
-* [Circle Loss](https://github.com/TinyZeaMays/CircleLoss/blob/master/circle_loss.py)
-* [CrossEntropyLabelSmooth Loss]()
+* [TransReID](https://arxiv.org/abs/2102.04378) [[Code](https://github.com/heshuting555/TransReID)]
+* [LightMBN](https://arxiv.org/abs/2101.10774) [[Code](https://github.com/jixunbo/LightMBN)]
+* [PLR-OSNet](https://arxiv.org/abs/2001.07442v1) [[Code](https://github.com/AI-NERC-NUPT/PLR-OSNet)]
 
 
-Augmentations:
-* [Random Erasing](https://arxiv.org/pdf/1708.04896)
-* [Random GrayScale](https://arxiv.org/abs/2101.08533)
-* [AutoAugment](https://github.com/tensorflow/tpu/blob/master/models/official/efficientnet/autoaugment.py) (Coming Soon)
-* [AugMix](https://github.com/google-research/augmix) (Coming Soon)
+## Models Comparison
 
-Features coming soon:
-* [Native DDP](https://pytorch.org/docs/stable/notes/ddp.html)
-* [Native AMP](https://pytorch.org/docs/stable/notes/amp_examples.html)
-* [TorchScript Support]()
+Market1501 (256x128 Image Size)
+
+Method | Model | mAP | Rank-1 | Rank-5 | Rank-10  
+--- | --- | --- | --- | --- | --- 
+TransREID | ViT | 89.0 | 95.1 | - | -
+LightMBN | OSNet | 91.5 | 96.3 | - | -
+PLR-OSNet | OSNet | 88.9 | 95.6 | - | -
 
 
-## Datasets
+## Datasets Preparation
 
 ### Market1501
 
